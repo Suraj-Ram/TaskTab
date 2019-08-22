@@ -1,3 +1,7 @@
+body {
+    background-color: #F7F9FF;
+}
+
 .main {
     margin-top: 5%;
     display: grid;
@@ -29,7 +33,12 @@
 
 .task {
     /* margin-top: 5px; */
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     display: grid;
     grid-template-columns: 90% 5% 5%;
+}
+
+.task-checked {
+    text-decoration: line-through;
+    color: #757474;
 }
