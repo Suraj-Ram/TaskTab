@@ -1,6 +1,7 @@
 const taskInput = document.getElementById('taskInput')
 const addBtn = document.getElementById('addBtn')
 
+
 renderTasks()
 
 taskInput.addEventListener('keypress', e => {
@@ -13,6 +14,8 @@ addBtn.addEventListener('click', e  => {
 })
 
 function renderTasks() {
+    $('.tasks').html("")
+    
     tasks.forEach(task => {
         let taskTemplate = `
             <div class="task">
@@ -27,6 +30,7 @@ function renderTasks() {
             
             </div>
         `
+   
         $('.tasks').append(taskTemplate)
     })
 }
