@@ -1,0 +1,35 @@
+.main {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-column-gap: 1em;
+}
+
+.left, .middle, .right {
+    /* background-color: beige; */
+}
+
+.middle {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+
+.todo-main {
+    /* display: grid; */
+    margin: 10px;
+
+}
+
+.add-todo {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    margin-bottom: 15px;
+}
+
+.task {
+    /* margin-top: 5px; */
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 90% 5% 5%;
+}
