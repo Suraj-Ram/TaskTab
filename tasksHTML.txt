@@ -1,0 +1,22 @@
+<div class="task">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="1">
+                            <label class="custom-control-label task-checked" for="1">Ch</label>
+                        </div>
+                        <div class="tags">
+                            
+                        </div>
+                        <button class="btn close">&times</button>
+                        
+                    </div>
+                    
+                    <div class="task">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="2">
+                            <label class="custom-control-label" for="2">Check this custom checkbox</label>
+                        </div>
+                        <div class="tags">
+
+                        </div>
+                        <button class="btn close">&times</button>
+                    </div>
