@@ -1,35 +1,24 @@
 var tasks = [
     {
-      "userId": 1,
       "id": 345354,
-      "title": "delectus aut autem",
+      "title": "This is an example task",
       "completed": false,
-      "tags": ["p"]
+      "tags": []
     },
     {
-      "userId": 1,
       "id": 34524267,
-      "title": "quis ut nam facilis et officia qui",
-      "completed": false
-    },
-    {
-      "userId": 1,
-      "id": 3,
-      "title": "fugiat veniam minus",
-      "completed": false,
-      "tags": ["p"]
-    },
-    {
-      "userId": 1,
-      "id": 4,
-      "title": "et porro tempora",
+      "title": "They can be checked off when completed...",
       "completed": true
     },
     {
-      "userId": 1,
-      "id": 5,
-      "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+      "id": 3,
+      "title": "...and prioritized by adding a '#' when adding.",
       "completed": false,
       "tags": ["p"]
+    },
+    {
+      "id": 4,
+      "title": "Delete these and try yourself!",
+      "completed": false
     }
   ]
