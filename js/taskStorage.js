@@ -1,4 +1,4 @@
-var tasks = [
+var firstTasks = [
     {
       "id": 345354,
       "title": "This is an example task",

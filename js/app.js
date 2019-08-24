@@ -97,5 +97,13 @@ function saveTasks() {
 }
 
 function loadTasks() {
-    tasks = JSON.parse( localStorage.getItem('tasks') )
+    let tasks = JSON.parse( localStorage.getItem('tasks') )
+
+    // First time use
+    if(tasks) {
+        return tasks
+    }
+    else {
+        return firstTasks
+    }
 }
