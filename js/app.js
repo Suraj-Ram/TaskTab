@@ -2,7 +2,7 @@ const taskInput = document.getElementById('taskInput')
 const addBtn = document.getElementById('addBtn')
 const siteTitle = document.getElementById('siteTitle')
 
-loadTasks()
+tasks = loadTasks()
 renderTasks()
 
 taskInput.addEventListener('keypress', e => {
