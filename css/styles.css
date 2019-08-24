@@ -42,3 +42,16 @@ body {
     text-decoration: line-through;
     color: #757474;
 }
+
+/*
+-----------------------------
+FOR MOBILE AND SMALL SCREENS
+delete if bugs are present
+-----------------------------
+*/
+
+@media only screen and (max-width: 768px) {
+    .main{
+        grid-template-columns: 0% 100% 0%;
+    }
+}
