@@ -1,7 +1,8 @@
 const taskInput = document.getElementById('taskInput')
 const addBtn = document.getElementById('addBtn')
+const siteTitle = document.getElementById('siteTitle')
 
-
+loadTasks()
 renderTasks()
 
 taskInput.addEventListener('keypress', e => {
@@ -16,6 +17,8 @@ addBtn.addEventListener('click', e  => {
 function renderTasks() {
     $('.tasks').html("")
     
+    siteTitle.innerHTML = `TaskTab (${tasks.length})`
+
     tasks.forEach(task => {
         let tagsTemplate = `` 
         if(task.tags) {
@@ -44,6 +47,9 @@ function renderTasks() {
    
         $('.tasks').append(taskTemplate)
     })
+
+    saveTasks()
+
 }
 
 function addTask(task) {
@@ -84,4 +90,12 @@ function deleteTask(id) {
     tasks = newTasks
 
     renderTasks()
+}
+
+function saveTasks() {
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+}
+
+function loadTasks() {
+    tasks = JSON.parse( localStorage.getItem('tasks') )
 }
