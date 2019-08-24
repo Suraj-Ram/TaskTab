@@ -20,7 +20,7 @@ function renderTasks() {
         let taskTemplate = `
             <div class="task">
             <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="${task.id}">
+                <input type="checkbox" class="custom-control-input" id="${task.id}" ${task.completed ? 'checked' : ''} onchange="taskChecked(this.id)">
                 <label class="custom-control-label ${task.completed ? 'task-checked' : ''}" for="${task.id}">${task.title}</label>
             </div>
             <div class="tags">
@@ -45,4 +45,30 @@ function addTask(task) {
     console.log(taskObj)
     tasks.push(taskObj)
 
+    taskInput.value = ""
+
+    renderTasks()
+
+}
+
+function taskChecked(id) {
+    console.log(`Checking: ${id}`)
+
+    tasks.forEach(task => {
+        if(task.id == id) {
+            task.completed = !task.completed 
+        }
+    })
+
+    renderTasks()
+}
+
+function deleteTask(id) {
+    console.log(`Deleting ${id}`)
+
+    const newTasks = tasks.filter(task => task.id != id)
+
+    tasks = newTasks
+
+    renderTasks()
 }
