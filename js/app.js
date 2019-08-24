@@ -17,6 +17,17 @@ function renderTasks() {
     $('.tasks').html("")
     
     tasks.forEach(task => {
+        let tagsTemplate = `` 
+        if(task.tags) {
+            task.tags.forEach(tag => {
+                if(tag === "p") {
+                    tagsTemplate = `<i class="fas fa-exclamation ${task.completed ? 'text-secondary': 'text-danger'}"></i>`
+                }
+            })
+        }
+
+        
+
         let taskTemplate = `
             <div class="task">
             <div class="custom-control custom-checkbox">
@@ -24,9 +35,9 @@ function renderTasks() {
                 <label class="custom-control-label ${task.completed ? 'task-checked' : ''}" for="${task.id}">${task.title}</label>
             </div>
             <div class="tags">
-                
+                ${tagsTemplate}
             </div>
-            <button class="btn close">&times</button>
+            <button class="btn close" id=${task.id} onclick="deleteTask(this.id)">&times</button>
             
             </div>
         `
@@ -40,15 +51,17 @@ function addTask(task) {
     let taskObj = {}
     let d = new Date()
     taskObj.id = d.getTime()
-    taskObj.title = task
+    taskObj.tags = task.includes("#") ? ["p"] : []
+
+    taskObj.title = task.replace("#","")
     taskObj.completed = false
+
     console.log(taskObj)
     tasks.push(taskObj)
 
     taskInput.value = ""
 
     renderTasks()
-
 }
 
 function taskChecked(id) {

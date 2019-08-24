@@ -3,7 +3,8 @@ var tasks = [
       "userId": 1,
       "id": 345354,
       "title": "delectus aut autem",
-      "completed": false
+      "completed": false,
+      "tags": ["p"]
     },
     {
       "userId": 1,
@@ -15,7 +16,8 @@ var tasks = [
       "userId": 1,
       "id": 3,
       "title": "fugiat veniam minus",
-      "completed": false
+      "completed": false,
+      "tags": ["p"]
     },
     {
       "userId": 1,
@@ -27,6 +29,7 @@ var tasks = [
       "userId": 1,
       "id": 5,
       "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-      "completed": false
+      "completed": false,
+      "tags": ["p"]
     }
   ]
