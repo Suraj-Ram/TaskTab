@@ -2,7 +2,7 @@
 
 A minimalist productivity booster 
 
-![alt text](https://source.unsplash.com/random/200x200)
+![alt text](https://imgur.com/a/obbe3Qu)
 
 
 ## Usage
