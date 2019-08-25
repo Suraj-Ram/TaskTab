@@ -5,7 +5,15 @@ const siteTitle = document.getElementById('siteTitle')
 tasks = loadTasks()
 renderTasks()
 
+//Init popovers
+$(function () {   
+    $('[data-toggle="popover"]').popover() 
+  });
+
 taskInput.addEventListener('keypress', e => {
+    // Hide popover that alerts teh user of an empty field
+    $('#taskInput').popover('hide')
+
     if(e.keyCode === 13) {
         addTask(taskInput.value)
     }
@@ -54,18 +62,25 @@ function renderTasks() {
 
 function addTask(task) {
     console.log(`Adding: ${task}`)
-    let taskObj = {}
-    let d = new Date()
-    taskObj.id = d.getTime()
-    taskObj.tags = task.includes("#") ? ["p"] : []
 
-    taskObj.title = task.replace("#","")
-    taskObj.completed = false
+    if(isEmpty(task)) {
+        handleEmpty()
+    }
+    else {
+        let taskObj = {}
+        let d = new Date()
+        taskObj.id = d.getTime()
+        taskObj.tags = task.includes("#") ? ["p"] : []
+    
+        taskObj.title = task.replace("#","")
+        taskObj.completed = false
+    
+        console.log(taskObj)
+        tasks.push(taskObj)
+    
+        taskInput.value = ""
+    }
 
-    console.log(taskObj)
-    tasks.push(taskObj)
-
-    taskInput.value = ""
 
     renderTasks()
 }
@@ -106,4 +121,25 @@ function loadTasks() {
     else {
         return firstTasks
     }
+}
+
+// Check if task is empty - returns bool based on string input
+function isEmpty(str) {
+    let condition = str.replace(/\s/g, '')
+    if(condition) {
+        return false
+    }
+    else {
+        return true
+    }
+}
+
+function handleEmpty() {
+    // Use a bootstrap popover under the Input field
+    $('#taskInput').popover({
+        content: 'Enter a task',
+        trigger: 'focus',
+    })
+
+    $('#taskInput').popover('show')
 }
