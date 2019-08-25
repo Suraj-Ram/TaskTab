@@ -2,6 +2,9 @@
 
 A minimalist productivity booster 
 
+![alt text](https://source.unsplash.com/random/200x200)
+
+
 ## Usage
 
 Head over to [TaskTab](tasktab-beta.netliify.com) to interact with the web app (hosted by netlify)
