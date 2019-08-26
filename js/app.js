@@ -109,6 +109,10 @@ function deleteTask(id) {
     renderTasks()
 }
 
+function deleteAllTasks() {
+    tasks = [ ]
+    renderTasks()
+}
 
 function saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(tasks))
