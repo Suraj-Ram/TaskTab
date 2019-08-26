@@ -3,6 +3,8 @@ const addBtn = document.getElementById('addBtn')
 const siteTitle = document.getElementById('siteTitle')
 
 tasks = loadTasks()
+settings = loadSettings()
+changeBg(settings.background[0], settings.background[1])
 renderTasks()
 
 //Init popovers

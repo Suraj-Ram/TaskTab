@@ -12,7 +12,8 @@
     <script src="./bootstrap/fontawesome.js"></script>
 
     <link rel="stylesheet" href="./css/styles.css">
-    <script defer src="./js/taskStorage.js"></script>
+    <script  src="./js/taskStorage.js"></script>
+    <script src="./js/settings.js"></script>
     <script defer src="./js/app.js"></script>
  
 
@@ -24,13 +25,13 @@
         <a href="#" class="navbar-brand">
             <img src="./assets/icons/icon-128.png" height="40" width="40" alt="">
         </a>
-        <i class="fas fa-cog text-secondary" style="font-size: 20px"></i>
+        <i class="fas fa-cog text-secondary" style="font-size: 20px; cursor: pointer;" data-toggle="modal" data-target="#settingsModal"></i>
     </nav>
 
     <div class="main">
         
         <div class="left">
-            
+
         </div>
         <div class="middle">
             <div class="todo-main">
@@ -48,5 +49,35 @@
         </div>
 
     </div>
+
+
+    <div class="modal fade" id="settingsModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Settings</h5>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <button class="btn btn-danger">Clear All Tasks</button>
+
+                    <hr>
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Change Background </button>
+                        <div class="dropdown-menu">
+                            <span class="dropdown-item bg-color-selector">Suraj</span>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                <div class="modal-footer">
+                    <em>Changes are saved automatically</em>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

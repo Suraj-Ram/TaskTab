@@ -1,6 +1,6 @@
 body {
     background-color: #F7F9FF;
-    background-image: linear-gradient(90deg, #001f3f, #7FDBFF)
+    background-image: linear-gradient(90deg, #39CCCC, #01FF70)
 }
 
 .main {
@@ -42,6 +42,10 @@ body {
 .task-checked {
     text-decoration: line-through;
     color: #757474;
+}
+
+.bg-color-selector {
+    background-image: linear-gradient(90deg, red, yellow)
 }
 
 /*
