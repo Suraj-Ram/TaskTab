@@ -1,6 +1,5 @@
 body {
     background-color: #F7F9FF;
-    background-image: linear-gradient(90deg, #39CCCC, #01FF70)
 }
 
 .main {
@@ -45,9 +44,25 @@ body {
 }
 
 .bg-color-selector {
-    background-image: linear-gradient(90deg, red, yellow)
+    padding: 15px;
+    margin-top: 5px;
+    cursor: pointer;
 }
-
+.bg-color-selector-na {
+    background-image: linear-gradient(90deg, #001f3f, #7FDBFF);
+}
+.bg-color-selector-tl {
+    background-image: linear-gradient(90deg, #39CCCC, #01FF70)
+}
+.bg-color-selector-oy {
+    background-image: linear-gradient(90deg, #FF851B, #FFDC00)
+}
+.bg-color-selector-mr {
+    background-image: linear-gradient(90deg, #85144b, #FF4136)
+}
+.bg-color-selector-gs {
+    background-image: linear-gradient(90deg, #AAAAAA, #DDDDDD)
+}
 /*
 -----------------------------
 FOR MOBILE AND SMALL SCREENS
