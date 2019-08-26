@@ -21,4 +21,8 @@ var firstTasks = [
       "title": "Delete these and try yourself!",
       "completed": false
     }
-  ]
+]
+
+const firstSettings = {
+  background: ['navy', 'aqua']
+}
