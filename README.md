@@ -2,7 +2,7 @@
 
 A minimalist productivity booster 
 
-![alt text](https://imgur.com/BpKq9NM)
+![alt text](https://raw.githubusercontent.com/Suraj-Ram/TaskTab/master/assets/icons/icon-128.png)
 
 
 ## Usage
