@@ -24,5 +24,5 @@ var firstTasks = [
 ]
 
 const firstSettings = {
-  background: ['navy', 'aqua']
+  background: ['maroon', 'red']
 }
