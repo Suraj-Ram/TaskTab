@@ -3,6 +3,8 @@ const addBtn = document.getElementById('addBtn')
 const siteTitle = document.getElementById('siteTitle')
 const deleteAllTasksBtn = document.getElementById("deleteAllTasksBtn")
 
+var taskCloseButtons;
+var taskCheckboxes;
 
 tasks = loadTasks()
 settings = loadSettings()
@@ -47,13 +49,13 @@ function renderTasks() {
         let taskTemplate = `
             <div class="task">
             <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="${task.id}" ${task.completed ? 'checked' : ''} onchange="taskChecked(this.id)">
+                <input type="checkbox" class="custom-control-input taskCheck" id="${task.id}" ${task.completed ? 'checked' : ''} >
                 <label class="custom-control-label ${task.completed ? 'task-checked' : ''}" for="${task.id}">${task.title}</label>
             </div>
             <div class="tags">
                 ${tagsTemplate}
             </div>
-            <button class="btn close" id=${task.id} onclick="deleteTask(this.id)">&times</button>
+            <button class="btn close taskClose" id=${task.id}>&times</button>
             
             </div>
         `
@@ -62,6 +64,22 @@ function renderTasks() {
     })
 
     saveTasks()
+
+    taskCloseButtons = document.getElementsByClassName('taskClose')
+    taskCheckboxes = document.getElementsByClassName('taskCheck')
+    console.log(taskCheckboxes)
+
+    for(i = 0; i < taskCloseButtons.length; i++) {
+        taskCloseButtons[i].onclick = function() {
+            deleteTask(this.id)
+        }
+    }
+
+    for(e = 0; e < taskCheckboxes.length; e++) {
+        taskCheckboxes[e].onclick = function() {
+            taskChecked(this.id)
+        }
+    }
 
 }
 
