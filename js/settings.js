@@ -46,3 +46,17 @@ function changeBg(color1, color2) {
 
     document.body.style.background = `linear-gradient(90deg, ${colors[color1]}, ${colors[color2]})`
 }
+
+// Gradient on click handlers
+
+const bgChangeNavyAqua = document.getElementById("bgChange-navy-aqua")
+const bgChangeTealLime = document.getElementById("bgChange-teal-lime")
+const bgChangeOrangeYellow = document.getElementById("bgChange-orange-yellow")
+const bgChangeMaroonRed = document.getElementById("bgChange-maroon-red")
+const bgChangeGraySilver = document.getElementById("bgChange-gray-silver")
+
+bgChangeNavyAqua.addEventListener('click', () => handleBgChange('navy','aqua'))
+bgChangeTealLime.addEventListener('click', () => handleBgChange('teal','lime'))
+bgChangeOrangeYellow.addEventListener('click', () => handleBgChange('orange','yellow'))
+bgChangeMaroonRed.addEventListener('click', () => handleBgChange('maroon','red'))
+bgChangeGraySilver.addEventListener('click', () => handleBgChange('gray','silver'))
