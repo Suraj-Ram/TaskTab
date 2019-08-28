@@ -1,6 +1,8 @@
 const taskInput = document.getElementById('taskInput')
 const addBtn = document.getElementById('addBtn')
 const siteTitle = document.getElementById('siteTitle')
+const deleteAllTasksBtn = document.getElementById("deleteAllTasksBtn")
+
 
 tasks = loadTasks()
 settings = loadSettings()
@@ -23,6 +25,7 @@ taskInput.addEventListener('keypress', e => {
 addBtn.addEventListener('click', e  => {
     addTask(taskInput.value)
 })
+deleteAllTasksBtn.addEventListener('click', () => deleteAllTasks())
 
 function renderTasks() {
     $('.tasks').html("")
