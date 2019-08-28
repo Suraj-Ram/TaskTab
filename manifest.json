@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "TaskTab",
     "version": "2.1.0",
-    "description": "A sleek and minimalist todo list app, display right on your newtab page.",
+    "description": "A sleek and minimalist todo list app, displayed right on your newtab page.",
 
     "icons": {
         "16": "assets/icons/icon-16.png",
