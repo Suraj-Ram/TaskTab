@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "TaskTab",
+    "version": "2.1.0",
+    "description": "A sleek and minimalist todo list app, display right on your newtab page.",
+
+    "icons": {
+        "16": "assets/icons/icon-16.png",
+        "48": "assets/icons/icon-48.png",
+        "128": "assets/icons/icon-128.png"
+    },
+
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+
+    "content_security_policy": "script-src 'self' 'sha256-d7a74c70068733c12a6d71d8b27080ef3592ce4ee1b12edec5b8947c43383026' 'sha256-f3c281559c01a46b5d9dd5e8f2afa24c4c24287cdb6d5106057f3f7ae462dbd2' 'sha256-7db6802ae48b4c8b22886c12492b34c8a3e77886b6c3a2383e27c1f2ac2e2247'; object-src 'self'"
+
+}
